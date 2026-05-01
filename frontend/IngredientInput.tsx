@@ -8,11 +8,18 @@ export function IngredientInput({ onSearch }: { onSearch: (tags: string[]) => vo
   const [tags, setTags] = useState<string[]>([]);
   const [input, setInput] = useState("");
 
+  const commitTag = () => {
+    const tag = input.trim();
+
+    if (!tag) return;
+
+    if (!tags.includes(tag)) setTags([...tags, tag]);
+    setInput("");
+  };
+
   const addTag = (e: KeyboardEvent) => {
-    if (e.key === 'Enter' && input.trim()) {
-      const tag = input.trim();
-      if (!tags.includes(tag)) setTags([...tags, tag]);
-      setInput("");
+    if (e.key === 'Enter') {
+      commitTag();
     }
   };
 
@@ -36,13 +43,22 @@ export function IngredientInput({ onSearch }: { onSearch: (tags: string[]) => vo
               </motion.span>
             ))}
           </AnimatePresence>
-          <input 
-            className="min-w-[220px] flex-1 bg-transparent p-2 text-lg outline-none placeholder:text-muted-500/70"
-            placeholder="Add ingredients and press Enter..."
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={addTag}
-          />
+          <div className="flex min-w-[220px] flex-1 items-center gap-2 rounded-[1.2rem] border border-emerald-100 bg-emerald-50/35 px-3 py-2.5">
+            <input 
+              className="min-w-0 flex-1 bg-transparent text-lg outline-none placeholder:text-muted-500/70"
+              placeholder="Add ingredients..."
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={addTag}
+            />
+            <button
+              type="button"
+              onClick={commitTag}
+              className="shrink-0 rounded-full bg-emerald-600 px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-emerald-700"
+            >
+              Enter
+            </button>
+          </div>
         </div>
         <button 
           onClick={() => onSearch(tags)}
