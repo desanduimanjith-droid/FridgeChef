@@ -1,5 +1,5 @@
 import { ChefHat, Heart, UtensilsCrossed } from 'lucide-react';
-import { navLinks } from '../app/siteContent';
+import { navLinks } from './siteContent';
 
 export function Navbar() {
   return (

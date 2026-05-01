@@ -1,5 +1,5 @@
 import { ArrowRight, Clock3, Flame, Sparkles } from 'lucide-react';
-import type { RecipeCardData } from '../app/siteContent';
+import type { RecipeCardData } from './siteContent';
 
 export default function RecipeCard({ recipe, compact = false }: { recipe: RecipeCardData; compact?: boolean }) {
   return (

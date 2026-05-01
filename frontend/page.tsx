@@ -2,10 +2,10 @@
 import { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import { BadgeCheck, BookOpen, Clock3, Flame, Heart, Leaf, Search, Sparkles, Star, UtensilsCrossed } from 'lucide-react';
-import { Footer } from '../components/Footer';
-import { IngredientInput } from '../components/IngredientInput';
-import RecipeCard from '../components/RecipeCard';
-import { Navbar } from '../components/Navbar';
+import { Footer } from './Footer';
+import { IngredientInput } from './IngredientInput';
+import RecipeCard from './RecipeCard';
+import { Navbar } from './Navbar';
 import {
 	categories,
 	featuredIngredients,
@@ -51,7 +51,7 @@ export default function Home() {
 				<div className="pointer-events-none absolute right-[-4rem] top-[32rem] -z-10 h-80 w-80 rounded-full bg-success-100/40 blur-3xl" />
 
 				<section className="mx-auto max-w-7xl px-6 pb-16 pt-14 lg:px-8 lg:pb-24 lg:pt-20">
-					<div className="grid items-center gap-14 lg:grid-cols-[1.08fr_0.92fr]">
+					<div className="grid items-start gap-14 lg:grid-cols-[1.08fr_0.92fr]">
 						<div className="space-y-8">
 							<motion.div
 								initial={{ y: 18, opacity: 0 }}
@@ -136,7 +136,7 @@ export default function Home() {
 							initial={{ scale: 0.98, opacity: 0, y: 20 }}
 							animate={{ scale: 1, opacity: 1, y: 0 }}
 							transition={{ delay: 0.12 }}
-							className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/80 p-4 shadow-[0_30px_80px_rgba(15,23,42,0.14)] backdrop-blur-xl"
+							className="relative self-start overflow-hidden rounded-[2rem] border border-white/70 bg-white/80 p-4 shadow-[0_30px_80px_rgba(15,23,42,0.14)] backdrop-blur-xl"
 						>
 							<img
 								src={featuredRecipe.image}
@@ -238,11 +238,11 @@ export default function Home() {
 							</div>
 						</div>
 
-						<div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+						<div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
 							<img
 								src={featuredRecipe.image}
 								alt={featuredRecipe.name}
-								className="h-full min-h-[18rem] w-full rounded-[1.5rem] object-cover"
+								className="h-[24rem] w-full rounded-[1.5rem] object-cover lg:h-[30rem]"
 							/>
 
 							<div className="space-y-5 rounded-[1.5rem] bg-muted-50 p-5">

@@ -1,5 +1,5 @@
 import { ArrowUpRight, ChefHat } from 'lucide-react';
-import { footerColumns, navLinks } from '../app/siteContent';
+import { footerColumns, navLinks } from './siteContent';
 
 export function Footer() {
   return (

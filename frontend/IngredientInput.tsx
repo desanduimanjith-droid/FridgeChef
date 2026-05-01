@@ -2,7 +2,7 @@
 import { useState, KeyboardEvent } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Sparkles, X } from 'lucide-react';
-import { quickSuggestions } from '../app/siteContent';
+import { quickSuggestions } from './siteContent';
 
 export function IngredientInput({ onSearch }: { onSearch: (tags: string[]) => void }) {
   const [tags, setTags] = useState<string[]>([]);
