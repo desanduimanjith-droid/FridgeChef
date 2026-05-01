@@ -46,9 +46,9 @@ export default function Home() {
 			<Navbar />
 
 			<main id="top" className="relative">
-				<div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[52rem] bg-[radial-gradient(circle_at_15%_15%,rgba(249,115,22,0.10),transparent_28%),radial-gradient(circle_at_85%_12%,rgba(16,185,129,0.12),transparent_22%),linear-gradient(180deg,rgba(255,250,244,0.96)_0%,rgba(248,245,239,0.78)_46%,rgba(246,241,232,0.30)_100%)]" />
-				<div className="pointer-events-none absolute left-[-6rem] top-40 -z-10 h-72 w-72 rounded-full bg-brand-100/40 blur-3xl" />
-				<div className="pointer-events-none absolute right-[-4rem] top-[32rem] -z-10 h-80 w-80 rounded-full bg-success-100/40 blur-3xl" />
+				<div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[52rem] bg-[radial-gradient(circle_at_15%_15%,rgba(34,197,94,0.14),transparent_28%),radial-gradient(circle_at_85%_12%,rgba(16,185,129,0.18),transparent_22%),radial-gradient(circle_at_50%_0%,rgba(134,239,172,0.16),transparent_28%),linear-gradient(180deg,rgba(240,253,244,0.98)_0%,rgba(236,253,245,0.82)_46%,rgba(220,252,231,0.36)_100%)]" />
+				<div className="pointer-events-none absolute left-[-6rem] top-40 -z-10 h-72 w-72 rounded-full bg-success-100/50 blur-3xl" />
+				<div className="pointer-events-none absolute right-[-4rem] top-[32rem] -z-10 h-80 w-80 rounded-full bg-emerald-100/50 blur-3xl" />
 
 				<section className="mx-auto max-w-7xl px-6 pb-16 pt-14 lg:px-8 lg:pb-24 lg:pt-20">
 					<div className="grid items-start gap-14 lg:grid-cols-[1.08fr_0.92fr]">

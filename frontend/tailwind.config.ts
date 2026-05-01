@@ -11,14 +11,17 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          50: '#fff7ed', // orange-50
-          100: '#ffedd5', // orange-100
-          500: '#f97316', // orange-500
-          600: '#ea580c', // orange-600
+          50: '#f0fdf4', // green-50
+          100: '#dcfce7', // green-100
+          200: '#bbf7d0', // green-200
+          500: '#22c55e', // green-500
+          600: '#16a34a', // green-600
+          700: '#15803d', // green-700
         },
         success: {
           50: '#f0fdf4', // green-50
           100: '#dcfce7', // green-100
+          200: '#bbf7d0', // green-200
           600: '#16a34a', // green-600
           700: '#15803d', // green-700
         },
