@@ -3,6 +3,7 @@ import { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import { BadgeCheck, BookOpen, Clock3, Flame, Heart, Leaf, Search, Sparkles, Star, UtensilsCrossed } from 'lucide-react';
 import { Footer } from './Footer';
+import { BrandLockup } from './BrandLockup';
 import { IngredientInput } from './IngredientInput';
 import RecipeCard from './RecipeCard';
 import { Navbar } from './Navbar';
@@ -52,7 +53,9 @@ export default function Home() {
 
 				<section className="mx-auto max-w-7xl px-6 pb-16 pt-14 lg:px-8 lg:pb-24 lg:pt-20">
 					<div className="grid items-start gap-14 lg:grid-cols-[1.08fr_0.92fr]">
-						<div className="space-y-8">
+						<div className="space-y-8 text-center lg:text-left">
+							<BrandLockup className="mx-auto lg:mx-0" />
+
 							<motion.div
 								initial={{ y: 18, opacity: 0 }}
 								animate={{ y: 0, opacity: 1 }}

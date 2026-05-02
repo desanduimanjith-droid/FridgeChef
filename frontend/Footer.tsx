@@ -1,4 +1,5 @@
-import { ArrowUpRight, ChefHat } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
+import { BrandLockup } from './BrandLockup';
 import { footerColumns, navLinks } from './siteContent';
 
 export function Footer() {
@@ -7,10 +8,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-14 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
           <div className="space-y-5">
-            <div className="flex items-center gap-3 text-2xl font-bold tracking-tight text-muted-900">
-              <ChefHat className="h-8 w-8 text-brand-500" />
-              Fridge<span className="text-brand-500">Chef</span>
-            </div>
+            <BrandLockup variant="nav" className="md:items-start md:text-left" />
             <p className="max-w-md text-sm leading-6 text-muted-500">
               Cooking made simple - turn what you have into something delicious.
             </p>

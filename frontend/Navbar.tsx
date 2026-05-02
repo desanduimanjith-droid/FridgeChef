@@ -1,13 +1,13 @@
-import { ChefHat, Heart, UtensilsCrossed } from 'lucide-react';
+import { Heart, UtensilsCrossed } from 'lucide-react';
+import { BrandLockup } from './BrandLockup';
 import { navLinks } from './siteContent';
 
 export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b border-emerald-200/70 bg-[linear-gradient(180deg,rgba(236,253,245,0.9),rgba(240,253,244,0.72))] backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <a href="#top" className="flex items-center gap-3 text-2xl font-bold tracking-tight text-muted-900">
-          <ChefHat className="h-8 w-8 text-brand-500" />
-          Fridge<span className="text-brand-500">Chef</span>
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-8">
+        <a href="#top" className="shrink-0 transition-transform hover:-translate-y-0.5">
+          <BrandLockup variant="nav" className="md:items-start md:text-left" />
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
