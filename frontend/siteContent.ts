@@ -86,6 +86,8 @@ export const recipeCards: RecipeCardData[] = [
     category: "Dinner",
     summary: "A soothing bowl with broth, vegetables, and shredded chicken.",
     ingredients: ["Chicken", "Carrot", "Celery", "Onion", "Herbs"],
+
+    
   },
 ];
 
@@ -113,7 +115,7 @@ export const featuredRecipe = {
     "Add diced chicken and cook until golden brown.",
     "Push chicken to the side, scramble the eggs in the empty space.",
     "Add cooked rice and soy sauce, mix everything together.",
-    "Cook for 2–3 minutes, garnish with green onions and serve hot.",
+    "Cook for 2-3 minutes, garnish with green onions and serve hot.",
   ],
   tip: "Use day-old rice for the best texture.",
 };

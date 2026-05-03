@@ -12,6 +12,7 @@ import {
 	featuredIngredients,
 	featuredRecipe,
 	heroIngredients,
+	quickSuggestions,
 	recipeCards,
 	type Category,
 } from './siteContent';
@@ -120,6 +121,39 @@ export default function Home() {
 									</motion.div>
 								))}
 							</div>
+
+							<motion.div
+								initial={{ y: 14, opacity: 0 }}
+								animate={{ y: 0, opacity: 1 }}
+								transition={{ delay: 0.34 }}
+								className="rounded-[1.75rem] border border-white/70 bg-white/80 p-5 text-left shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur-xl"
+							>
+								<div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+									<div className="space-y-2">
+										<p className="text-sm font-bold uppercase tracking-[0.18em] text-brand-500">Need a few extras?</p>
+										<h3 className="text-xl font-extrabold tracking-tight text-muted-900">Add these next</h3>
+										<p className="max-w-md text-sm leading-6 text-muted-500">
+											These ingredients pair well with what&apos;s already in your fridge and help unlock more recipes.
+										</p>
+									</div>
+
+									<div className="rounded-2xl bg-brand-50 px-4 py-3 text-center sm:min-w-28">
+										<p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-500">Matches</p>
+										<p className="mt-1 text-2xl font-extrabold text-brand-700">{visibleRecipes.length}</p>
+									</div>
+								</div>
+
+								<div className="mt-5 flex flex-wrap gap-3">
+									{quickSuggestions.map((item) => (
+										<span
+											key={item}
+											className="rounded-full border border-brand-100 bg-brand-50 px-4 py-2 text-sm font-semibold text-brand-700"
+										>
+											{item}
+										</span>
+									))}
+								</div>
+							</motion.div>
 
 							<IngredientInput onSearch={handleSearch} />
 
@@ -241,14 +275,14 @@ export default function Home() {
 							</div>
 						</div>
 
-						<div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+						<div className="space-y-6">
 							<img
 								src={featuredRecipe.image}
 								alt={featuredRecipe.name}
 								className="h-[24rem] w-full rounded-[1.5rem] object-cover lg:h-[30rem]"
 							/>
 
-							<div className="space-y-5 rounded-[1.5rem] bg-muted-50 p-5">
+							<div className="rounded-[1.5rem] bg-muted-50 p-5">
 								<div className="flex flex-wrap items-center gap-3 text-sm font-semibold text-muted-500">
 									<span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5">
 										<Clock3 className="h-4 w-4 text-brand-500" />
@@ -264,33 +298,39 @@ export default function Home() {
 									</span>
 								</div>
 
-								<div>
-									<h3 className="text-sm font-bold uppercase tracking-[0.18em] text-muted-900">Ingredients</h3>
-									<ul className="mt-3 grid gap-2 text-sm leading-6 text-muted-500 sm:grid-cols-2">
-										{featuredRecipe.ingredients.map((ingredient) => (
-											<li key={ingredient} className="rounded-2xl bg-white px-4 py-3 shadow-sm">
-												{ingredient}
-											</li>
-										))}
-									</ul>
-								</div>
+								<div className="mt-5 grid gap-5 xl:grid-cols-[1.15fr_0.85fr] xl:items-start">
+									<div>
+										<h3 className="text-sm font-bold uppercase tracking-[0.18em] text-muted-900">Steps</h3>
+										<ol className="mt-3 space-y-3 text-sm leading-6 text-muted-500">
+											{featuredRecipe.steps.map((step, index) => (
+												<li key={step} className="flex gap-3 rounded-2xl bg-white px-4 py-3 shadow-sm">
+													<span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-50 text-xs font-bold text-brand-600">
+														{index + 1}
+													</span>
+													<span>{step}</span>
+												</li>
+											))}
+										</ol>
+									</div>
 
-								<div>
-									<h3 className="text-sm font-bold uppercase tracking-[0.18em] text-muted-900">Steps</h3>
-									<ol className="mt-3 space-y-3 text-sm leading-6 text-muted-500">
-										{featuredRecipe.steps.map((step, index) => (
-											<li key={step} className="flex gap-3 rounded-2xl bg-white px-4 py-3 shadow-sm">
-												<span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-50 text-xs font-bold text-brand-600">
-													{index + 1}
-												</span>
-												<span>{step}</span>
-											</li>
-										))}
-									</ol>
-								</div>
+									<div className="space-y-4 rounded-[1.25rem] border border-brand-100 bg-white p-4 shadow-sm">
+										<div>
+											<p className="text-sm font-bold uppercase tracking-[0.18em] text-brand-600">Quick note</p>
+											<p className="mt-2 text-sm leading-6 text-muted-500">{featuredRecipe.tip}</p>
+										</div>
 
-								<div className="rounded-2xl border border-brand-100 bg-brand-50 px-4 py-3 text-sm font-semibold text-brand-700">
-									Tip · {featuredRecipe.tip}
+										<div>
+											<p className="text-sm font-bold uppercase tracking-[0.18em] text-muted-900">Match</p>
+											<div className="mt-2 rounded-2xl bg-brand-50 px-4 py-3 text-sm font-semibold text-brand-700">
+												{featuredRecipe.rating}
+											</div>
+										</div>
+
+										<div>
+											<p className="text-sm font-bold uppercase tracking-[0.18em] text-muted-900">Best with</p>
+											<p className="mt-2 text-sm leading-6 text-muted-500">Garlic, soy sauce, and green onions keep the flavor sharp and balanced.</p>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
