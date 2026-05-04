@@ -3,7 +3,8 @@ import path from 'path';
 
 const nextConfig: NextConfig = {
   turbopack: {
-    root: path.join(__dirname),
+    // Use a project-root-relative path so Turbopack resolves correctly
+    root: '.',
   },
 };
 
