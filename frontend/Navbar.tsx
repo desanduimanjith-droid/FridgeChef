@@ -4,8 +4,8 @@ import { navLinks } from './siteContent';
 
 export function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 border-b border-emerald-200/70 bg-[linear-gradient(180deg,rgba(236,253,245,0.9),rgba(240,253,244,0.72))] backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-8">
+    <nav className="sticky top-0 z-50 border-b border-amber-200/70 bg-[linear-gradient(180deg,rgba(255,250,245,0.94),rgba(255,247,237,0.84))] backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-6 py-4 lg:px-8">
         <a href="#top" className="shrink-0 transition-transform hover:-translate-y-0.5">
           <BrandLockup variant="nav" className="md:items-start md:text-left" />
         </a>
@@ -15,7 +15,7 @@ export function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm font-medium text-emerald-900/70 transition-colors hover:text-brand-700"
+              className="text-sm font-medium text-stone-600 transition-colors hover:text-amber-700"
             >
               {link.label}
             </a>
@@ -25,12 +25,12 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href="#favorites"
-            className="hidden items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50/80 px-4 py-2 text-sm font-semibold text-emerald-800 shadow-sm transition-transform hover:-translate-y-0.5 sm:inline-flex"
+            className="hidden items-center gap-2 rounded-full border border-amber-200 bg-amber-50/90 px-4 py-2 text-sm font-semibold text-amber-900 shadow-sm transition-transform hover:-translate-y-0.5 sm:inline-flex"
           >
-            <Heart className="h-4 w-4 text-emerald-600" />
+            <Heart className="h-4 w-4 text-amber-600" />
             Favorites
           </a>
-          <button className="inline-flex items-center gap-2 rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-emerald-700/20 transition-transform hover:-translate-y-0.5 hover:bg-emerald-800">
+          <button className="inline-flex items-center gap-2 rounded-full bg-stone-900 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-stone-900/15 transition-transform hover:-translate-y-0.5 hover:bg-stone-800">
             <UtensilsCrossed className="h-4 w-4" />
             Sign In
           </button>
