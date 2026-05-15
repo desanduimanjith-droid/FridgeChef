@@ -1,1 +1,20 @@
-[]
+[
+	{
+		"id": "sample1",
+		"title": "Scrambled Eggs",
+		"requiredIngredients": ["eggs", "butter", "salt"],
+		"instructions": "Beat eggs, cook in butter, season with salt."
+	},
+	{
+		"id": "sample2",
+		"title": "Peanut Butter Toast",
+		"requiredIngredients": ["bread", "peanut butter"],
+		"instructions": "Spread peanut butter on toasted bread."
+	},
+	{
+		"id": "sample3",
+		"title": "Milkshake",
+		"requiredIngredients": ["milk", "ice cream"],
+		"instructions": "Blend milk and ice cream until smooth."
+	}
+]
