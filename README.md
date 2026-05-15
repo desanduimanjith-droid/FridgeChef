@@ -60,8 +60,3 @@ Voice Input: Use the Gemini Live-style voice interaction to tell the app what's 
 Dark Mode: A sleek nocturnal mode for late-night cooking.
 
 
-Commit 18 on feature/many-commits-20260515-184042 at 2026-05-15T18:40:43.7332738+05:30
-
-Commit 19 on feature/many-commits-20260515-184042 at 2026-05-15T18:40:43.8232870+05:30
-
-Commit 20 on feature/many-commits-20260515-184042 at 2026-05-15T18:40:43.9203130+05:30
