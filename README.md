@@ -49,7 +49,7 @@ Image Hosting: High-quality food photography sourced via Unsplash API.
 
 4.AI Suggestions: Real-time feedback and ingredient "freshness" detection.
 
-🚀 Future Roadmap
+🚀 Future Roadmap//
 
  User Authentication: Save "Favorite" recipes to a personal profile.
 
