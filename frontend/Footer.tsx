@@ -42,7 +42,7 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col gap-3 border-t border-stone-200 pt-6 text-sm text-stone-600 sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 FridgeChef. All rights reserved.</p>
-          <p>Made with 🥬 for home cooks.</p>
+          <p>Made with  for home cooks.</p>
         </div>
       </div>
     </footer>
