@@ -1,1 +1,65 @@
-[]
+[
+	{
+		"id": "eggs",
+		"name": "eggs",
+		"category": "dairy",
+		"quantity": 12,
+		"unit": "pieces",
+		"perishable": true,
+		"notes": "store refrigerated"
+	},
+	{
+		"id": "butter",
+		"name": "butter",
+		"category": "dairy",
+		"quantity": 200,
+		"unit": "grams",
+		"perishable": true,
+		"notes": ""
+	},
+	{
+		"id": "salt",
+		"name": "salt",
+		"category": "spices",
+		"quantity": 500,
+		"unit": "grams",
+		"perishable": false,
+		"notes": ""
+	},
+	{
+		"id": "bread",
+		"name": "bread",
+		"category": "bakery",
+		"quantity": 1,
+		"unit": "loaf",
+		"perishable": true,
+		"notes": ""
+	},
+	{
+		"id": "peanut butter",
+		"name": "peanut butter",
+		"category": "spread",
+		"quantity": 340,
+		"unit": "grams",
+		"perishable": false,
+		"notes": "no refrigeration needed"
+	},
+	{
+		"id": "milk",
+		"name": "milk",
+		"category": "dairy",
+		"quantity": 1,
+		"unit": "liter",
+		"perishable": true,
+		"notes": "keep refrigerated"
+	},
+	{
+		"id": "ice cream",
+		"name": "ice cream",
+		"category": "frozen",
+		"quantity": 500,
+		"unit": "ml",
+		"perishable": true,
+		"notes": "keep frozen"
+	}
+]
