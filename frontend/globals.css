@@ -1,6 +1,15 @@
 @import "tailwindcss";
 
 :root {
+  --color-text: #1f2937;
+  --color-muted: #6b7280;
+  --color-accent: #fbbf24; /* amber */
+  --color-accent-600: #f59e0b;
+  --surface-100: #fffaf3;
+  --surface-200: #fff7ed;
+  --surface-300: #f7f0e7;
+  --radius: 0.5rem;
+  --content-max-width: 72rem; /* 1152px */
   color-scheme: light;
 }
 
@@ -15,10 +24,13 @@ body {
     radial-gradient(circle at top left, rgba(251, 191, 36, 0.16), transparent 22%),
     radial-gradient(circle at top right, rgba(45, 212, 191, 0.14), transparent 20%),
     radial-gradient(circle at 50% 0%, rgba(251, 146, 60, 0.12), transparent 28%),
-    linear-gradient(180deg, #fffaf3 0%, #fff7ed 38%, #f7f0e7 100%);
+    linear-gradient(180deg, var(--surface-100) 0%, var(--surface-200) 38%, var(--surface-300) 100%);
   background-attachment: fixed;
-  color: #1f2937;
+  color: var(--color-text);
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
 }
 
 h1,
@@ -28,7 +40,29 @@ h3,
   font-family: var(--font-playfair), Georgia, serif;
 }
 
+/* Selection */
 ::selection {
   background: rgba(251, 191, 36, 0.25);
   color: #7c2d12;
+}
+
+/* Reusable content container */
+.container {
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Utility helpers */
+.card {
+  background: rgba(255,255,255,0.8);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+}
+
+main {
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
 }
