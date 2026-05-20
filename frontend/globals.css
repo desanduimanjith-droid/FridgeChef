@@ -66,3 +66,75 @@ main {
   padding-top: 1.5rem;
   padding-bottom: 2.5rem;
 }
+
+/* Theme palettes — apply by adding data-theme="warm" to <html> or .theme-warm on body */
+[data-theme="warm"], .theme-warm {
+  --color-text: #331A00;
+  --color-muted: #7C2D12;
+  --color-accent: #FCA5A5;
+  --color-accent-600: #F59E0B;
+  --surface-100: #FFF7ED;
+  --surface-200: #FFF3E0;
+  --surface-300: #F7EFE6;
+}
+
+/* Modern Fresh */
+[data-theme="fresh"], .theme-fresh {
+  --color-text: #083344;
+  --color-muted: #2b6777;
+  --color-accent: #06B6D4;
+  --color-accent-600: #0EA5A4;
+  --surface-100: #F0FDFA;
+  --surface-200: #E6FBF9;
+  --surface-300: #DFF7F6;
+}
+
+/* Minimal Monochrome */
+[data-theme="mono"], .theme-mono {
+  --color-text: #0F172A;
+  --color-muted: #6B7280;
+  --color-accent: #6B7280;
+  --color-accent-600: #374151;
+  --surface-100: #FFFFFF;
+  --surface-200: #F8FAFC;
+  --surface-300: #F1F5F9;
+}
+
+/* Vibrant Contrast */
+[data-theme="vibrant"], .theme-vibrant {
+  --color-text: #F8FAFC;
+  --color-muted: #CBD5E1;
+  --color-accent: #FF6B6B;
+  --color-accent-600: #0EA5FF;
+  --surface-100: #0F172A;
+  --surface-200: #0B1220;
+  --surface-300: #071023;
+}
+
+/* Soft Pastel */
+[data-theme="pastel"], .theme-pastel {
+  --color-text: #0F172A;
+  --color-muted: #6B7280;
+  --color-accent: #FDE68A;
+  --color-accent-600: #A7F3D0;
+  --surface-100: #FFFFFF;
+  --surface-200: #FBFDFF;
+  --surface-300: #F7FEF9;
+}
+
+/* Small utility examples */
+.btn-primary {
+  background: var(--color-accent-600);
+  color: var(--color-text);
+  border-radius: var(--radius);
+  padding: 0.5rem 0.75rem;
+  border: none;
+}
+
+.text-accent {
+  color: var(--color-accent-600);
+}
+
+.bg-surface {
+  background: linear-gradient(180deg, var(--surface-100), var(--surface-200));
+}
